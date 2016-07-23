@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Ordering System</title>
+		<link rel="stylesheet" href="styles/style.css" media="all"/>
+		<link rel="stylesheet" href="styles/style.css" media="all"/>
+
+	</head>
+	<body>
+		<div class="main_wrapper">
+			<div class="header_wrapper">
+			<img id="logo" src=""/>
+			<img id="banner" src=""/>		
+		</div>
+		<div class="menubar">
+			<ul id="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Catalog</a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Sign up</a></li>
+				<li><a href="#">cart</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+				<div id="form">
+				<form method="get" action="result.php" enctype="multipart/form-data">
+					<input type="text" name="user_query"/>
+					<input type="submit" name="search" placeholder="Search a product"value="Search"/>
+				</form>
+				</div>
+		</div>
+		<!--this is content area-->
+		<div class="content_wrapper">
+			<div id="content_area">
+				<div id="products_box">
+					<?php 
+						getProducts();
+					?>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+		<h2 style="text-align:center; padding-top:30px;">&copy;2015 by Team - 11<h2>
+		</div>
+	</body>
+</html>

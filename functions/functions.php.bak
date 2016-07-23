@@ -1,0 +1,27 @@
+<?php
+$con = mysqli_connect("localhost","root","","ordering_system");
+
+function getProducts(){
+global $con;
+$get_prod = "select * from products order by RAND() LIMIT 0,6";
+$ run_prod = mysql_query($con,$get_prod);
+
+while($row_prod=mysqli_fetch_array($run_prod)){
+	$product_id = $row_prod['product_id'];
+	$product_title = $row_prod['product_title'];
+	$produt_price = $row_prod['product_price'];
+	$pro_image = $row_pro['product_image'];
+
+	echo "
+			<div id='single_product'>
+				<h3>$product_title</h3>
+				<img src='admin_area/product_images/$pro_image' width='180' height='180'/>
+				<p></b>$ $pro_price</b></p>
+				<a href='details.php' style='float:left;'>Details</a>
+			</div>
+			";
+	}
+
+}
+
+?>
